@@ -9,6 +9,36 @@
         <title>2021 NFL Draft Report</title>
     </head>
     <body>
+        <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="draftrecap.html">Full 1st Round Recap w/ Grades</a>
+    <a href="winners&losers.html">Winners and Losers</a>
+    <a href="topteams.html">Top Ten NFL Teams</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>        
         <h1>2021 NFL Draft Report</h1>
         <h6>Welcome to the 2021 NFL draft report!</h6>
 
